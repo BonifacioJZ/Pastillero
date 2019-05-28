@@ -1,6 +1,6 @@
 {
   "name": "pastillero",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Servidor para el proyecto del pastillero",
   "main": "index.js",
   "scripts": {

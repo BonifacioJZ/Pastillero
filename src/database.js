@@ -1,9 +1,10 @@
+//Librerias
 const mysql = require('mysql')
 const {promisify} =  require('util');
 const {database} = require('./key')
 
 const pool =mysql.createPool(database)
-
+// Manejo de Errores de MySql
 pool.getConnection((err,connection)=>{
     if(err){
         if(err.code === 'PROTOCOL_CONNECTION_LOST') console.error('DATABASE CONNECTION WAS CLOSED')
