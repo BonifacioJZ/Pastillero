@@ -1,17 +1,18 @@
 //Librerias
 const express = require('express')
 const morgan = require('morgan')
+const bodyParser = require('body-parser')
 //initialization
 const app = express();
 
 //settings 
 
-app.set('port',process.env.PORT ||4000)
+app.set('port',process.env.PORT ||4001)
 
 //Middlewares
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended:false}))
-app.use(express.json())
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json())
 
 //Global Variables
 app.use((req,res,next)=>{

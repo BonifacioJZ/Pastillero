@@ -11,9 +11,7 @@ CREATE TABLE Paciente(
     Email VARCHAR(100),
     contrasena VARCHAR(300),
     Telefono VARCHAR(13),
-    PRIMARY KEY (`id_paciente`),
-    UNIQUE (`Email`),
-    UNIQUE (`Telefono`)
+    PRIMARY KEY (`id_paciente`)
 
 );
 
@@ -26,9 +24,7 @@ CREATE TABLE Encargado (
     Email VARCHAR(100),
     contrasena VARCHAR(300),
     Telefono VARCHAR(13),
-    PRIMARY KEY (`id_encargado`),
-    UNIQUE (`Email`),
-    UNIQUE (`Telefono`)
+    PRIMARY KEY (`id_encargado`)
 );
 
 CREATE TABLE Paciente_Encargado(
@@ -55,18 +51,18 @@ CREATE TABLE alergias_paciente(
 CREATE TABLE Alarmas(
     id_alarma int not null auto_increment,
     Nombre VARCHAR(100),
-    Hora_de_Ingesta DATE,
+    Hora_de_Ingesta VARCHAR(5),
     Tomo int DEFAULT '0',
     Casilla int,
     PRIMARY KEY (`id_alarma`)
 );
 
 CREATE TABLE Medicina(
-    id_medicina int not null auto_increment,
+    id_medicina int not null auto_increment, 
     Nombre VARCHAR(100),
     Receta TEXT,
-    Dosis int,
-    Frecuencia DATE,
+    Dosis VARCHAR(50),
+    Frecuencia VARCHAR(50),
     PRIMARY KEY (`id_medicina`)
 );
 
